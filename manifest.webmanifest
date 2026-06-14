@@ -1,0 +1,9 @@
+{
+  "name": "The Becoming Room",
+  "short_name": "Becoming",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5efe7",
+  "theme_color": "#7a4b3a",
+  "icons": []
+}

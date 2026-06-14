@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Becoming Room</title>
+  <meta name="description" content="A private evidence-based clarity, self-trust, and becoming journal." />
+  <meta name="theme-color" content="#7a4b3a" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">The Becoming Room</p>
+        <h1 id="screenTitle">Before you reach outward, come inward.</h1>
+      </div>
+      <div class="version">V1.0</div>
+    </header>
+
+    <main id="main" class="main"></main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button data-nav="today" class="nav-btn active">Today</button>
+      <button data-nav="trigger" class="nav-btn">Triggered</button>
+      <button data-nav="journal" class="nav-btn">Page</button>
+      <button data-nav="entries" class="nav-btn">Entries</button>
+      <button data-nav="becoming" class="nav-btn">Becoming</button>
+    </nav>
+  </div>
+
+  <template id="cardTemplate">
+    <section class="card"></section>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
