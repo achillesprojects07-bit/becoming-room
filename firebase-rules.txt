@@ -1,0 +1,24 @@
+FIRESTORE RULES
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/entries/{entryId} {
+      allow read, write, delete: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
+
+STORAGE RULES
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /users/{userId}/journalPhotos/{fileName} {
+      allow read, write, delete: if request.auth != null && request.auth.uid == userId
+        && fileName.matches('\\d{4}-\\d{2}-\\d{2}\\.jpg')
+        && request.resource.size < 2 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+  }
+}
