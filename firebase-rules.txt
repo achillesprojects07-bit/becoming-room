@@ -1,4 +1,4 @@
-FIRESTORE RULES
+FIRESTORE RULES ONLY
 
 rules_version = '2';
 service cloud.firestore {
@@ -9,16 +9,5 @@ service cloud.firestore {
   }
 }
 
-STORAGE RULES
-
-rules_version = '2';
-service firebase.storage {
-  match /b/{bucket}/o {
-    match /users/{userId}/journalPhotos/{fileName} {
-      allow read, write, delete: if request.auth != null && request.auth.uid == userId
-        && fileName.matches('\\d{4}-\\d{2}-\\d{2}\\.jpg')
-        && request.resource.size < 2 * 1024 * 1024
-        && request.resource.contentType.matches('image/.*');
-    }
-  }
-}
+Storage is intentionally skipped in V1.2 to avoid Blaze billing.
+Photos are saved locally inside the browser/device for now.

@@ -3,8 +3,7 @@
   "short_name": "Becoming",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#171226",
-  "theme_color": "#171226",
-  "description": "A private clarity and evidence-based rewiring journal.",
+  "background_color": "#10101a",
+  "theme_color": "#5c4fd8",
   "icons": []
 }

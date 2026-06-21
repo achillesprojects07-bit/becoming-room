@@ -2,41 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Becoming Room</title>
-  <meta name="description" content="A private evidence-based clarity, self-trust, becoming, and visual journal app." />
-  <meta name="theme-color" content="#171226" />
-  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div id="app" class="app-shell">
-    <header class="topbar">
-      <div class="brand-block">
-        <div class="mark">BR</div>
-        <div>
-          <p class="eyebrow">The Becoming Room</p>
-          <h1 id="screenTitle">Before you reach outward, come inward.</h1>
-        </div>
-      </div>
-      <div class="status-stack">
-        <div class="version">V1.1</div>
-        <div id="syncBadge" class="sync-badge">Local mode</div>
-      </div>
-    </header>
-
-    <main id="main" class="main"></main>
-
-    <nav class="bottom-nav" aria-label="Main navigation">
-      <button data-nav="today" class="nav-btn active">Today</button>
-      <button data-nav="trigger" class="nav-btn">Triggered</button>
-      <button data-nav="page" class="nav-btn">Page</button>
-      <button data-nav="entries" class="nav-btn">Entries</button>
-      <button data-nav="becoming" class="nav-btn">Becoming</button>
-      <button data-nav="settings" class="nav-btn">Settings</button>
-    </nav>
+    <div class="boot-card">
+      <p class="eyebrow">The Becoming Room</p>
+      <h1>Opening your room…</h1>
+      <p>If this stays here, app.js is not loading.</p>
+    </div>
   </div>
 
-  <script type="module" src="app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
